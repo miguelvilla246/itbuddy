@@ -95,7 +95,7 @@
       top: 1rem;
       z-index: 100;
       box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-      ition: box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease;
     }
 
     header.scrolled { box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
@@ -220,8 +220,8 @@
       color: #fff;
       box-shadow: 0 4px 0 var(--accent-orange-dark), 0 8px 24px rgba(231,111,81,0.3);
     }
-    .btn-primary:hover { trans: translateY(-3px); box-shadow: 0 7px 0 var(--accent-orange-dark), 0 14px 28px rgba(231,111,81,0.3); }
-    .btn-primary:active { trans: translateY(1px); box-shadow: 0 2px 0 var(--accent-orange-dark); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 7px 0 var(--accent-orange-dark), 0 14px 28px rgba(231,111,81,0.3); }
+    .btn-primary:active { transform: translateY(1px); box-shadow: 0 2px 0 var(--accent-orange-dark); }
 
     .btn-secondary {
       background: #fff;
@@ -229,15 +229,15 @@
       border: 2px solid var(--navy);
       box-shadow: 0 4px 0 var(--navy);
     }
-    .btn-secondary:hover { trans: translateY(-3px); box-shadow: 0 7px 0 var(--navy); }
-    .btn-secondary:active { trans: translateY(1px); box-shadow: 0 2px 0 var(--navy); }
+    .btn-secondary:hover { transform: translateY(-3px); box-shadow: 0 7px 0 var(--navy); }
+    .btn-secondary:active { transform: translateY(1px); box-shadow: 0 2px 0 var(--navy); }
 
     .btn-teal {
       background: var(--accent-teal);
       color: #fff;
       box-shadow: 0 4px 0 var(--accent-teal-dark), 0 8px 24px rgba(42,157,143,0.3);
     }
-    .btn-teal:hover { trans: translateY(-3px); box-shadow: 0 7px 0 var(--accent-teal-dark); }
+    .btn-teal:hover { transform: translateY(-3px); box-shadow: 0 7px 0 var(--accent-teal-dark); }
 
     .btn-block { width: 100%; margin-top: auto; }
 
@@ -285,7 +285,7 @@
     .sec-header { margin-bottom: 2.75rem; }
     .sec-header.center { text-align: center; }
     .kicker {
-      text-trans: uppercase;
+      text-transform: uppercase;
       font-size: 0.75rem;
       font-weight: 800;
       letter-spacing: 0.12em;
@@ -335,9 +335,9 @@
       overflow: hidden;
     }
 
-    .card-accent { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-teal); border-radius: 26px 26px 0 0; trans: scaleX(0); trans-origin: left; transition: trans 0.3s ease; }
-    .card:hover .card-accent { trans: scaleX(1); }
-    .card:hover { trans: translateY(-6px); box-shadow: 0 20px 40px rgba(15,44,69,0.1); border-color: rgba(0,0,0,0.08); }
+    .card-accent { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent-teal); border-radius: 26px 26px 0 0; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+    .card:hover .card-accent { transform: scaleX(1); }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(15,44,69,0.1); border-color: rgba(0,0,0,0.08); }
 
     .icon-wrap {
       width: 46px; height: 46px;
@@ -383,7 +383,7 @@
       z-index: 1;
     }
 
-    .step:hover { trans: translateY(-5px); box-shadow: var(--shadow-card); border-style: solid; border-color: var(--accent-yellow); }
+    .step:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-style: solid; border-color: var(--accent-yellow); }
 
     .step-num {
       width: 56px; height: 56px;
@@ -443,28 +443,28 @@
       box-shadow: var(--shadow-card);
     }
 
-    .price-card:hover { trans: translateY(-4px); box-shadow: 0 20px 40px rgba(15,44,69,0.1); }
+    .price-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(15,44,69,0.1); }
 
     .price-card.featured {
       border: 2.5px solid var(--accent-orange);
       background: linear-gradient(160deg, #fff 70%, rgba(231,111,81,0.04));
-      trans: scale(1.04);
+      transform: scale(1.04);
       box-shadow: 0 24px 60px rgba(231, 111, 81, 0.18);
       z-index: 2;
     }
 
-    .price-card.featured:hover { trans: scale(1.04) translateY(-4px); }
+    .price-card.featured:hover { transform: scale(1.04) translateY(-4px); }
 
     .badge-pop {
       position: absolute;
       top: -13px;
       left: 50%;
-      trans: translateX(-50%);
+      transform: translateX(-50%);
       background: var(--accent-orange);
       color: #fff;
       font-size: 0.72rem;
       font-weight: 800;
-      text-trans: uppercase;
+      text-transform: uppercase;
       letter-spacing: 0.05em;
       padding: 5px 14px;
       border-radius: 12px;
@@ -535,7 +535,7 @@
       font-size: 0.68rem;
       font-weight: 800;
       letter-spacing: 0.08em;
-      text-trans: uppercase;
+      text-transform: uppercase;
       color: var(--navy);
       background: rgba(233, 196, 106, 0.4);
       border: 1px solid rgba(233, 196, 106, 0.6);
@@ -644,10 +644,10 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      transition: trans 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .testi-card:hover { trans: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .testi-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
 
     .stars { color: var(--accent-yellow); font-size: 1rem; letter-spacing: 2px; }
 
@@ -682,16 +682,15 @@
       cursor: pointer;
     }
 
-    .faq-item:hover { trans: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); border-color: var(--accent-teal); }
+    .faq-item:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); border-color: var(--accent-teal); }
 
     .faq-q { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; }
     .faq-q h3 { color: var(--navy); font-size: 1rem; line-height: 1.4; }
-    .faq-icon { font-size: 1.2rem; color: var(--accent-teal); flex-shrink: 0; transition: trans 0.3s ease; }
+    .faq-icon { font-size: 1.2rem; color: var(--accent-teal); flex-shrink: 0; transition: transform 0.3s ease; }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
 
     .faq-answer { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid rgba(0,0,0,0.06); display: none; }
     .faq-item.open .faq-answer { display: block; }
-
 
     /* ===== CONTACT ===== */
     .contact-wrapper {
@@ -706,7 +705,7 @@
     }
 
     .input-group { margin-bottom: 1.25rem; }
-    label { display: block; font-size: 0.83rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--navy); letter-spacing: 0.02em; text-trans: uppercase; }
+    label { display: block; font-size: 0.83rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--navy); letter-spacing: 0.02em; text-transform: uppercase; }
 
     input, textarea, select {
       width: 100%;
@@ -781,7 +780,7 @@
     /* ===== SCROLL REVEAL ANIMATION ===== */
     .reveal {
       opacity: 0;
-      trans: translateY(24px);
+      transform: translateY(24px);
       transition: opacity 0.55s ease, transform 0.55s ease;
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -834,7 +833,7 @@
     <!-- ===== HEADER ===== -->
     <header id="header">
       <div class="logo">
-        <img src="ITB-Logo.png" alt="IT Buddy Logo" />
+        <img src="ITB-Logo.png" alt="Tech Buddy Logo" />
         <div>
           <div class="logo-tagline">Everyone needs a tech buddy.</div>
         </div>
@@ -847,8 +846,7 @@
         <a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta">Get Help Now</a>
       </nav>
-        </div>
-      </header>
+    </header>
 
     <main>
 
@@ -982,7 +980,7 @@
           <div class="testi-card reveal">
             <div class="stars">★★★★★</div>
             <p class="testi-text">"Miguel was incredibly patient and never made me feel embarrassed for not knowing something. He had my new laptop set up and running in under an hour!"</p>
-            <div class="testi-author"</div>
+            <div class="testi-author">
               <div class="testi-avatar">M</div>
               <div>
                 <div class="testi-name">Maria Rodriguez</div>
@@ -1243,25 +1241,27 @@
         </div>
 
         <div class="contact-wrapper reveal">
-          <form action="https://formsubmit.co/c811203dce3b9c7c017baad34286dbd4" method="POST" </form>
+          <form action="#" method="POST">
+          <form action="https://formsubmit.co/miguelvilla246@gmail.com" method="POST" />
+
+
             <div class="input-row">
               <div class="input-group">
                 <label>First Name</label>
-              <input type="text" name="first_name" placeholder="Your first name" required>
+                <input type="text" name="Your first name" placeholder="Your first name" required />
               </div>
               <div class="input-group">
                 <label>Last Name</label>
-                <input type="text" name="last_name" placeholder="Your last name">
+                <input type="text" name="Your last name" placeholder="Your last name" />
               </div>
             </div>
             <div class="input-group">
               <label>Email</label>
-              <input type="email" name="email" placeholder="your@email.com" required>
+              <input type="email" name="your@email.com" placeholder="your@email.com" required />
             </div>
             <div class="input-group">
               <label>What kind of help do you need?</label>
-      
-              <select name="help_type">
+              <select name="Select an option">
                 <option value="">Select an option…</option>
                 <option>Home / Personal Support</option>
                 <option>Small Business Support</option>
@@ -1271,12 +1271,12 @@
             </div>
             <div class="input-group">
               <label>Tell me about the issue</label>
-              <textarea name="message" rows="4" placeholder="Describe what's going on — even 'it's acting weird' works!"></textarea>
+              <textarea rows="4" placeholder="Describe what's going on — even 'it's acting weird' works!"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.05rem;">Send Message ✈️</button>
             <p style="text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 1rem;">🔒 Your info stays private. I'll reply within 1 business day.</p>
 
-             <input type="hidden" name="_subject" value="New Quote Request from Website">
+             <input type="hidden" name="_subject" value="New IT Request from Website">
              <input type="hidden" name="_next" value="https://itbud.net/thank-you.html">
              <input type="hidden" name="_captcha" value="false">
           </form>
@@ -1293,11 +1293,10 @@
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
-      <div>© <span id="year"></span> Tech Buddy by Miguel Villanueva · All rights reserved.</div>
+      <div>© <span id="year"></span> IT Buddy by Miguel Villanueva · All rights reserved.</div>
       <div style="margin-top: 0.4rem; font-size: 0.78rem; opacity: 0.7;">Friendly tech help for everyone — no jargon, ever.</div>
     </footer>
 
-    </div>
   </div>
 
   <script>
@@ -1322,45 +1321,6 @@
     }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
 
     reveals.forEach(el => observer.observe(el));
-
-    
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const drawer = document.getElementById("drawer");
-  const overlay = document.getElementById("overlay");
-  const closeBtn = document.getElementById("closeDrawer");
-  const drawerLinks = document.querySelectorAll(".drawer a");
-
-  if (!hamburger || !drawer || !overlay || !closeBtn) return;
-
-  const openDrawer = () => {
-    drawer.classList.add("open");
-    overlay.classList.add("show");
-    hamburger.classList.add("active");
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeDrawer = () => {
-    drawer.classList.remove("open");
-    overlay.classList.remove("show");
-    hamburger.classList.remove("active");
-    document.body.style.overflow = "";
-  };
-
-  hamburger.addEventListener("click", () => {
-    const isOpen = drawer.classList.contains("open");
-    isOpen ? closeDrawer() : openDrawer();
-  });
-
-  overlay.addEventListener("click", closeDrawer);
-  closeBtn.addEventListener("click", closeDrawer);
-
-  drawerLinks.forEach(link => link.addEventListener("click", closeDrawer));
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeDrawer();
-  });
-});
-</script>
+  </script>
 </body>
 </html>
