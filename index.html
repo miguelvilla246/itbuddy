@@ -1350,29 +1350,43 @@
     reveals.forEach(el => observer.observe(el));
 
     
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("closeDrawer");
+  const drawerLinks = document.querySelectorAll(".drawer a");
 
-      const hamburger = document.getElementById("hamburger");
-      const mobileNav = document.getElementById("mobileNav");
-      const drawerClose = document.getElementById("drawerClose");
-      const navOverlay = document.getElementById("navOverlay");
-      const drawerLinks = document.querySelectorAll(".nav-drawer-link");
-      
-      function openDrawer() {
-        mobileNav.classList.add("open");
-        hamburger.classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-      
-      function closeDrawer() {
-        mobileNav.classList.remove("open");
-        hamburger.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-      
-      hamburger.addEventListener("click", openDrawer);
-      drawerClose.addEventListener("click", closeDrawer);
-      navOverlay.addEventListener("click", closeDrawer);
-      drawerLinks.forEach(link => link.addEventListener("click", closeDrawer));
-  </script>
+  if (!hamburger || !drawer || !overlay || !closeBtn) return;
+
+  const openDrawer = () => {
+    drawer.classList.add("open");
+    overlay.classList.add("show");
+    hamburger.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeDrawer = () => {
+    drawer.classList.remove("open");
+    overlay.classList.remove("show");
+    hamburger.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  hamburger.addEventListener("click", () => {
+    const isOpen = drawer.classList.contains("open");
+    isOpen ? closeDrawer() : openDrawer();
+  });
+
+  overlay.addEventListener("click", closeDrawer);
+  closeBtn.addEventListener("click", closeDrawer);
+
+  drawerLinks.forEach(link => link.addEventListener("click", closeDrawer));
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDrawer();
+  });
+});
+</script>
 </body>
 </html>
