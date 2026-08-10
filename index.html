@@ -90,14 +90,10 @@
     .header-inner {
       display: flex; align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 80px;
     }
-    .logo { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
-    .logo img { height: 54px; }
-    .logo-name {
-      font-family: var(--font-h); font-size: 1.25rem;
-      color: var(--navy); letter-spacing: -0.01em;
-    }
+    .logo { display: flex; align-items: center; flex-shrink: 0; }
+    .logo img { height: 70px; }
 
     nav { display: flex; align-items: center; gap: 2.25rem; }
     nav a:not(.nav-cta) {
@@ -295,7 +291,7 @@
       border: 1px solid var(--border); box-shadow: var(--shadow-lg);
       position: relative;
     }
-    .who-photo img { width: 100%; height: 480px; object-fit: cover; object-position: center top; display: block; }
+    .who-photo img { width: 100%; height: 520px; object-fit: cover; object-position: center 15%; display: block; }
     /* Orange corner accent */
     .who-photo::after {
       content: ""; position: absolute; bottom: -12px; right: -12px;
@@ -344,24 +340,24 @@
     .svc-visual {
       border-radius: var(--r-xl); overflow: hidden;
       border: 1px solid var(--border); box-shadow: var(--shadow-lg);
-      position: relative;
+      position: relative; display: flex; flex-direction: column;
     }
     .svc-visual-inner {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, var(--navy-3) 100%);
       aspect-ratio: 4/3;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 1rem; padding: 2.5rem;
+      gap: 1.25rem; padding: 2.5rem;
     }
-    .svc-visual-icon { font-size: 4rem; opacity: 0.9; }
+    .svc-visual-icon { font-size: 4.5rem; line-height: 1; }
     .svc-visual-label {
-      font-family: var(--font-h); font-size: 1.25rem;
-      color: rgba(255,255,255,0.8); text-align: center; line-height: 1.3;
+      font-family: var(--font-h); font-size: 1.3rem;
+      color: #fff; text-align: center; line-height: 1.3;
     }
     .svc-visual-badge {
-      position: absolute; bottom: 1.25rem; right: 1.25rem;
-      background: var(--orange); color: #fff;
-      font-size: 0.75rem; font-weight: 700; padding: 0.4rem 0.85rem;
-      border-radius: var(--r-pill); letter-spacing: 0.03em;
+      background: var(--orange);
+      color: #fff; font-size: 0.8rem; font-weight: 700;
+      padding: 0.65rem 1.25rem; letter-spacing: 0.04em;
+      text-align: center; border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     /* ═══════════════════════════════════════
@@ -597,7 +593,7 @@
     }
     .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center; }
     .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
-    .footer-logo img { height: 40px; filter: brightness(0) invert(1); opacity: 0.8; }
+    .footer-logo img { height: 56px; filter: brightness(0) invert(1); opacity: 0.8; }
     .footer-logo-name { font-family: var(--font-h); font-size: 1.1rem; color: rgba(255,255,255,0.7); }
     .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
     .footer-links a { font-size: 0.83rem; font-weight: 600; color: rgba(255,255,255,0.45); }
@@ -654,7 +650,6 @@
       <div class="header-inner">
         <div class="logo">
           <img src="ITB-Logo.png" alt="IT Buddy" />
-          <span class="logo-name">IT Buddy</span>
         </div>
         <nav>
           <a href="#services">Services</a>
@@ -1106,7 +1101,6 @@
       <div class="footer-inner">
         <div class="footer-logo">
           <img src="ITB-Logo.png" alt="IT Buddy" />
-          <span class="footer-logo-name">IT Buddy</span>
         </div>
         <div class="footer-links">
           <a href="#services">Services</a>
