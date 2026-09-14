@@ -2,43 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>IT Buddy – Managed IT & Tech Support | Connecticut</title>
+  <title>Small Business IT Support & Managed IT | IT Buddy Connecticut</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Expert IT support and cybersecurity for homes and small businesses across Connecticut. Managed support, device setup, and peace-of-mind tech help from IT Buddy." />
-  <meta property="og:title" content="IT Buddy – Managed IT & Tech Support | Connecticut">
-  <meta property="og:description" content="Expert IT support and cybersecurity for homes and small businesses across Connecticut.">
+
+  <meta name="description" content="Local IT support for Connecticut small businesses. IT Buddy handles Microsoft 365, Google Workspace, employee onboarding, cybersecurity, devices, backups and day-to-day tech support without the cost of a full-time IT department." />
+
+  <meta property="og:title" content="IT Buddy | Small Business IT Support in Connecticut">
+  <meta property="og:description" content="Your small business IT department — without hiring one. Local and remote IT support, cybersecurity, employee onboarding and device management.">
   <meta property="og:url" content="https://itbud.net">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://itbud.net/ITB-social-preview.png">
+
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="ITB-Logo.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/ITB-Logo.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* ═══════════════════════════════════════
-       TOKENS
-    ═══════════════════════════════════════ */
     :root {
-      --navy:        #0d2137;
-      --navy-2:      #163352;
-      --navy-3:      #1e4470;
-
-      --orange:      #d95f3b;
-      --orange-dk:   #b84a28;
-      --orange-lt:   #e8845f;
+      --navy: #0d2137;
+      --navy-2: #163352;
+      --navy-3: #1e4470;
+      --orange: #d95f3b;
+      --orange-dk: #b84a28;
+      --orange-lt: #e8845f;
       --orange-pale: #fdf0eb;
-
-      --slate:       #f4f7fa;   /* section bg alternate */
-      --white:       #ffffff;
-
-      --text:        #0d2137;
-      --text-2:      #3a556e;
-      --text-3:      #6b8299;
-
-      --border:      #e2e9f0;
+      --slate: #f4f7fa;
+      --white: #ffffff;
+      --text: #0d2137;
+      --text-2: #3a556e;
+      --text-3: #6b8299;
+      --border: #e2e9f0;
 
       --r-sm: 8px;
       --r-md: 14px;
@@ -54,11 +51,10 @@
       --font-b: 'DM Sans', sans-serif;
     }
 
-    /* ═══════════════════════════════════════
-       RESET
-    ═══════════════════════════════════════ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     html { scroll-behavior: smooth; }
+
     body {
       font-family: var(--font-b);
       background: var(--white);
@@ -67,410 +63,1009 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
-    h1,h2,h3,h4 { font-family: var(--font-h); line-height: 1.2; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-h);
+      line-height: 1.2;
+    }
+
     img { max-width: 100%; display: block; }
     a { text-decoration: none; color: inherit; transition: color 0.2s; }
     section { scroll-margin-top: 80px; }
 
-    /* ═══════════════════════════════════════
-       LAYOUT
-    ═══════════════════════════════════════ */
-    .container { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
-    .container--narrow { max-width: 820px; margin: 0 auto; padding: 0 2rem; }
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
-    /* ═══════════════════════════════════════
-       HEADER — clean sticky, Pearsk-style
-    ═══════════════════════════════════════ */
+    .container--narrow {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
     header {
-      position: sticky; top: 0; z-index: 200;
+      position: sticky;
+      top: 0;
+      z-index: 200;
       background: var(--white);
       border-bottom: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
     }
+
     .header-inner {
-      display: flex; align-items: center;
+      display: flex;
+      align-items: center;
       justify-content: space-between;
       height: 80px;
     }
-    .logo { display: flex; align-items: center; flex-shrink: 0; }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
     .logo img { height: 70px; }
 
-    nav { display: flex; align-items: center; gap: 2.25rem; }
-    nav a:not(.nav-cta) {
-      font-size: 0.9rem; font-weight: 600;
-      color: var(--text-2); letter-spacing: 0.01em;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.65rem;
     }
+
+    nav a:not(.nav-cta) {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--text-2);
+      letter-spacing: 0.01em;
+    }
+
     nav a:not(.nav-cta):hover { color: var(--orange); }
 
     .nav-cta {
-      padding: 0.65rem 1.5rem;
-      background: var(--orange); color: #fff;
+      padding: 0.65rem 1.35rem;
+      background: var(--orange);
+      color: #fff;
       border-radius: var(--r-pill);
-      font-size: 0.88rem; font-weight: 700;
+      font-size: 0.84rem;
+      font-weight: 700;
       box-shadow: 0 3px 0 var(--orange-dk);
       transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+      white-space: nowrap;
     }
+
     .nav-cta:hover {
       background: var(--orange-dk);
       transform: translateY(-2px);
       box-shadow: 0 5px 0 #933b1e;
     }
 
-    /* Hamburger */
     .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      width: 40px; height: 40px; align-items: center; justify-content: center;
-      background: none; border: 1.5px solid var(--border);
-      border-radius: var(--r-sm); cursor: pointer;
-      transition: border-color 0.2s;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-sm);
+      cursor: pointer;
     }
-    .hamburger:hover { border-color: var(--orange); }
-    .hamburger .bar { width: 20px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; transform-origin: center; }
+
+    .hamburger .bar {
+      width: 20px;
+      height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
     .hamburger.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open .bar:nth-child(2) { opacity: 0; }
     .hamburger.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* Mobile drawer */
-    .mobile-nav { display: none; position: fixed; inset: 0; z-index: 300; pointer-events: none; }
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      pointer-events: none;
+    }
+
     .mobile-nav.open { pointer-events: all; }
-    .mob-overlay { position: absolute; inset: 0; background: rgba(13,33,55,0.5); opacity: 0; transition: opacity 0.3s; }
+
+    .mob-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(13,33,55,0.5);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
     .mobile-nav.open .mob-overlay { opacity: 1; }
+
     .mob-drawer {
-      position: absolute; top: 0; right: 0;
-      width: min(320px, 86vw); height: 100%;
-      background: var(--white); border-left: 1px solid var(--border);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min(340px, 88vw);
+      height: 100%;
+      background: var(--white);
+      border-left: 1px solid var(--border);
       transform: translateX(100%);
       transition: transform 0.35s cubic-bezier(0.25,0.8,0.25,1);
-      display: flex; flex-direction: column; padding: 1.75rem;
-      overflow-y: auto; box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      padding: 1.75rem;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
     }
-    .mobile-nav.open .mob-drawer { transform: translateX(0); }
-    .mob-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; }
-    .mob-head img { height: 44px; }
-    .mob-close { width: 34px; height: 34px; border-radius: 50%; background: var(--slate); border: 1px solid var(--border); color: var(--navy); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; }
-    .mob-close:hover { background: var(--orange-pale); border-color: var(--orange); color: var(--orange); }
-    .mob-links { display: flex; flex-direction: column; gap: 0.2rem; flex: 1; }
-    .mob-links a { display: flex; align-items: center; gap: 0.85rem; padding: 0.85rem 0.9rem; border-radius: var(--r-md); font-size: 0.93rem; font-weight: 600; color: var(--text-2); transition: all 0.2s; }
-    .mob-links a:hover { background: var(--orange-pale); color: var(--orange); }
-    .mob-hr { height: 1px; background: var(--border); margin: 0.6rem 0; }
-    .mob-bottom { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
-    .mob-bottom a { display: flex; align-items: center; justify-content: center; width: 100%; padding: 1rem; border-radius: var(--r-pill); background: var(--orange); color: #fff; font-weight: 700; font-size: 0.93rem; box-shadow: 0 4px 0 var(--orange-dk); transition: transform 0.2s; }
-    .mob-bottom a:hover { transform: translateY(-2px); }
 
-    /* ═══════════════════════════════════════
-       BUTTONS
-    ═══════════════════════════════════════ */
+    .mobile-nav.open .mob-drawer { transform: translateX(0); }
+
+    .mob-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .mob-head img { height: 44px; }
+
+    .mob-close {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--slate);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .mob-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      flex: 1;
+    }
+
+    .mob-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 0.9rem;
+      border-radius: var(--r-md);
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: var(--text-2);
+    }
+
+    .mob-links a:hover {
+      background: var(--orange-pale);
+      color: var(--orange);
+    }
+
+    .mob-hr {
+      height: 1px;
+      background: var(--border);
+      margin: 0.6rem 0;
+    }
+
+    .mob-bottom {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .mob-bottom a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem;
+      border-radius: var(--r-pill);
+      background: var(--orange);
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 4px 0 var(--orange-dk);
+    }
+
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
-      padding: 1rem 2.1rem; border-radius: var(--r-pill);
-      font-family: var(--font-b); font-size: 0.97rem; font-weight: 700;
-      border: none; cursor: pointer; letter-spacing: 0.01em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 1rem 2.1rem;
+      border-radius: var(--r-pill);
+      font-family: var(--font-b);
+      font-size: 0.97rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.01em;
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
+
     .btn-orange {
-      background: var(--orange); color: #fff;
+      background: var(--orange);
+      color: #fff;
       box-shadow: 0 4px 0 var(--orange-dk), 0 8px 20px rgba(217,95,59,0.22);
     }
-    .btn-orange:hover { background: var(--orange-dk); transform: translateY(-2px); box-shadow: 0 6px 0 #933b1e, 0 12px 28px rgba(217,95,59,0.28); }
+
+    .btn-orange:hover {
+      background: var(--orange-dk);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #933b1e, 0 12px 28px rgba(217,95,59,0.28);
+    }
+
     .btn-navy {
-      background: var(--navy); color: #fff;
+      background: var(--navy);
+      color: #fff;
       box-shadow: 0 4px 0 rgba(0,0,0,0.3), 0 8px 20px rgba(13,33,55,0.2);
     }
-    .btn-navy:hover { background: var(--navy-2); transform: translateY(-2px); box-shadow: 0 6px 0 rgba(0,0,0,0.3), 0 14px 26px rgba(13,33,55,0.25); }
+
+    .btn-navy:hover {
+      background: var(--navy-2);
+      transform: translateY(-2px);
+    }
+
     .btn-outline-white {
-      background: transparent; color: #fff;
+      background: transparent;
+      color: #fff;
       border: 2px solid rgba(255,255,255,0.5);
     }
-    .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: #fff; transform: translateY(-2px); }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
     .btn-outline-navy {
-      background: transparent; color: var(--navy);
+      background: transparent;
+      color: var(--navy);
       border: 2px solid var(--navy);
     }
-    .btn-outline-navy:hover { background: var(--navy); color: #fff; transform: translateY(-2px); }
+
+    .btn-outline-navy:hover {
+      background: var(--navy);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
     .btn-block { width: 100%; }
 
-    /* ═══════════════════════════════════════
-       HERO — Pearsk full-bleed dark overlay style
-    ═══════════════════════════════════════ */
     .hero {
-      position: relative; min-height: 92vh;
-      display: flex; align-items: center;
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
       overflow: hidden;
     }
+
     .hero-bg {
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(125deg, rgba(13,33,55,0.97) 0%, rgba(22,51,82,0.88) 45%, rgba(30,68,112,0.78) 100%);
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(125deg, rgba(13,33,55,0.97) 0%, rgba(22,51,82,0.88) 45%, rgba(30,68,112,0.78) 100%);
       z-index: 1;
     }
-    /* Subtle geometric accent — Pearsk's structured feel */
+
     .hero-bg::after {
       content: "";
-      position: absolute; top: 0; right: 0;
-      width: 55%; height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55%;
+      height: 100%;
       background: linear-gradient(135deg, transparent 0%, rgba(217,95,59,0.08) 60%, rgba(217,95,59,0.14) 100%);
       clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
+
     .hero-grid-lines {
-      position: absolute; inset: 0; z-index: 1;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
       background-image:
         linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
       background-size: 60px 60px;
     }
+
     .hero-content {
-      position: relative; z-index: 2;
+      position: relative;
+      z-index: 2;
       padding: 8rem 0 6rem;
-      max-width: 700px;
+      max-width: 760px;
     }
+
     .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--orange-lt);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange-lt);
       margin-bottom: 1.5rem;
     }
-    .eyebrow-line { width: 28px; height: 2px; background: var(--orange); border-radius: 2px; }
-    .hero h1 {
-      font-size: clamp(2.5rem, 5.5vw, 4.2rem);
-      color: #fff; line-height: 1.08; margin-bottom: 1.5rem;
-    }
-    .hero h1 em { color: var(--orange-lt); font-style: normal; }
-    .hero-sub {
-      font-size: 1.1rem; color: rgba(255,255,255,0.65);
-      margin-bottom: 2.75rem; line-height: 1.75;
-      font-weight: 400; max-width: 580px;
-    }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
 
-    /* Stat bar — Pearsk shows trust signals under hero copy */
+    .eyebrow-line {
+      width: 28px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 5.6vw, 4.5rem);
+      color: #fff;
+      line-height: 1.06;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 em {
+      color: var(--orange-lt);
+      font-style: normal;
+    }
+
+    .hero-sub {
+      font-size: 1.12rem;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 2.5rem;
+      line-height: 1.75;
+      max-width: 650px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.25rem;
+    }
+
     .hero-stats {
-      display: flex; gap: 2.5rem; flex-wrap: wrap;
-      padding-top: 2.75rem;
+      display: flex;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+      padding-top: 2.5rem;
       border-top: 1px solid rgba(255,255,255,0.1);
     }
+
     .h-stat-num {
-      font-family: var(--font-h); font-size: 2rem;
-      color: #fff; line-height: 1;
+      font-family: var(--font-h);
+      font-size: 2rem;
+      color: #fff;
+      line-height: 1;
     }
+
     .h-stat-num span { color: var(--orange-lt); }
-    .h-stat-label { font-size: 0.82rem; color: rgba(255,255,255,0.5); font-weight: 500; margin-top: 0.3rem; }
 
-    /* ═══════════════════════════════════════
-       WHO WE ARE — Pearsk's intro strip
-    ═══════════════════════════════════════ */
-    .who-section { padding: 5rem 0; background: var(--white); }
-    .who-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: center; }
-
-    .who-label {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--orange);
-      margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;
-    }
-    .who-label::before { content: ""; width: 20px; height: 2px; background: var(--orange); border-radius: 2px; }
-    .who-inner h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 1.1rem; }
-    .who-inner p { font-size: 0.97rem; color: var(--text-2); line-height: 1.8; margin-bottom: 0.75rem; }
-    .who-inner strong { color: var(--navy); font-weight: 600; }
-
-    /* Checklist — Pearsk's signature service intro style */
-    .chk-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.75rem; }
-    .chk-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .chk-icon {
-      width: 28px; height: 28px; min-width: 28px;
-      background: var(--orange-pale); border: 1.5px solid rgba(217,95,59,0.2);
-      border-radius: var(--r-sm);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--orange); font-weight: 800; font-size: 0.75rem;
-      margin-top: 2px;
-    }
-    .chk-item h4 { font-family: var(--font-h); font-size: 1rem; color: var(--navy); margin-bottom: 0.25rem; }
-    .chk-item p { font-size: 0.88rem; color: var(--text-3); line-height: 1.6; }
-
-    /* Who right — about photo */
-    .who-photo {
-      border-radius: var(--r-xl); overflow: hidden;
-      border: 1px solid var(--border); box-shadow: var(--shadow-lg);
-      position: relative;
-    }
-    .who-photo img { width: 100%; height: 520px; object-fit: cover; object-position: center 15%; display: block; }
-    /* Orange corner accent */
-    .who-photo::after {
-      content: ""; position: absolute; bottom: -12px; right: -12px;
-      width: 72px; height: 72px;
-      border-right: 3px solid var(--orange); border-bottom: 3px solid var(--orange);
-      opacity: 0.5;
+    .h-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      font-weight: 500;
+      margin-top: 0.3rem;
     }
 
-    /* ═══════════════════════════════════════
-       SERVICES — full alternating image+text sections
-    ═══════════════════════════════════════ */
+    .sec-head { margin-bottom: 3rem; }
+
+    .sec-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .sec-eyebrow::before {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+
+    .sec-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.55rem);
+      color: var(--navy);
+    }
+
+    .sec-head .sub {
+      font-size: 1rem;
+      color: var(--text-3);
+      margin-top: 0.6rem;
+      max-width: 780px;
+    }
+
+    .pain-section {
+      padding: 5.5rem 0;
+      background: var(--white);
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    .pain-card {
+      background: var(--slate);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pain-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .pain-card h3 {
+      color: var(--navy);
+      font-size: 1.08rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pain-card p {
+      color: var(--text-3);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .pain-close {
+      text-align: center;
+      margin-top: 2.25rem;
+      font-family: var(--font-h);
+      font-size: 1.35rem;
+      color: var(--navy);
+    }
+
+    .pain-close span { color: var(--orange); }
+
     .services-section { background: var(--white); }
 
     .svc-block {
       padding: 6rem 0;
       border-top: 1px solid var(--border);
     }
+
+    .svc-block.alt { background: var(--slate); }
+
     .svc-block-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 5rem; align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
     }
+
     .svc-block-inner.reverse { direction: rtl; }
     .svc-block-inner.reverse > * { direction: ltr; }
 
     .svc-eyebrow {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--orange);
-      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       margin-bottom: 0.7rem;
     }
-    .svc-eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--orange); border-radius: 2px; }
 
-    .svc-block h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--navy); margin-bottom: 1rem; }
-    .svc-block p { font-size: 0.97rem; color: var(--text-2); line-height: 1.8; margin-bottom: 1rem; }
+    .svc-eyebrow::before {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
 
-    .svc-points { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0 2rem; }
-    .svc-point { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.93rem; color: var(--text-2); }
+    .svc-block h2 {
+      font-size: clamp(1.7rem, 2.8vw, 2.35rem);
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    .svc-block p {
+      font-size: 0.97rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .svc-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .svc-point {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.93rem;
+      color: var(--text-2);
+    }
+
     .sp-check {
-      width: 22px; height: 22px; min-width: 22px; border-radius: 50%;
-      background: var(--orange-pale); border: 1.5px solid rgba(217,95,59,0.25);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--orange); font-size: 0.68rem; font-weight: 800; margin-top: 2px;
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      border-radius: 50%;
+      background: var(--orange-pale);
+      border: 1.5px solid rgba(217,95,59,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 0.68rem;
+      font-weight: 800;
+      margin-top: 2px;
     }
 
-    /* Illustration placeholder (replaces Pearsk's images) */
     .svc-visual {
-      border-radius: var(--r-xl); overflow: hidden;
-      border: 1px solid var(--border); box-shadow: var(--shadow-lg);
-      position: relative; display: flex; flex-direction: column;
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
     }
+
     .svc-visual-inner {
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, var(--navy-3) 100%);
       aspect-ratio: 4/3;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 1.25rem; padding: 2.5rem;
-    }
-    .svc-visual-icon { font-size: 4.5rem; line-height: 1; }
-    .svc-visual-label {
-      font-family: var(--font-h); font-size: 1.3rem;
-      color: #fff; text-align: center; line-height: 1.3;
-    }
-    .svc-visual-badge {
-      background: var(--orange);
-      color: #fff; font-size: 0.8rem; font-weight: 700;
-      padding: 0.65rem 1.25rem; letter-spacing: 0.04em;
-      text-align: center; border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 2.5rem;
     }
 
-    /* ═══════════════════════════════════════
-       PROCESS — Pearsk numbered list, dark bg
-    ═══════════════════════════════════════ */
+    .svc-visual-icon {
+      font-size: 4.5rem;
+      line-height: 1;
+    }
+
+    .svc-visual-label {
+      font-family: var(--font-h);
+      font-size: 1.35rem;
+      color: #fff;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .svc-visual-badge {
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.65rem 1.25rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
+    .service-grid-section {
+      padding: 5.5rem 0;
+      background: var(--slate);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.3rem;
+    }
+
+    .service-mini {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-mini .icon {
+      font-size: 1.7rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-mini h3 {
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-mini p {
+      color: var(--text-3);
+      font-size: 0.89rem;
+      line-height: 1.7;
+    }
+
     .process-section {
       padding: 6rem 0;
       background: var(--navy);
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
+
     .process-section::before {
       content: "";
-      position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
       background-size: 60px 60px;
     }
+
     .process-section::after {
       content: "";
-      position: absolute; bottom: -150px; right: -100px;
-      width: 450px; height: 450px; border-radius: 50%;
+      position: absolute;
+      bottom: -150px;
+      right: -100px;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
       background: radial-gradient(circle, rgba(217,95,59,0.1), transparent 65%);
     }
-    .process-head { position: relative; z-index: 1; margin-bottom: 3.5rem; }
-    .process-eyebrow {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--orange-lt); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem;
-    }
-    .process-eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--orange); border-radius: 2px; }
-    .process-section h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); color: #fff; }
-    .process-section .sub { font-size: 1rem; color: rgba(255,255,255,0.5); margin-top: 0.6rem; }
 
-    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; position: relative; z-index: 1; }
+    .process-head {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 3.5rem;
+    }
+
+    .process-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange-lt);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .process-eyebrow::before {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+
+    .process-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: #fff;
+    }
+
+    .process-section .sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.6rem;
+      max-width: 800px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      position: relative;
+      z-index: 1;
+    }
+
     .step-card {
       padding: 2.5rem 2rem;
       border: 1px solid rgba(255,255,255,0.06);
-      position: relative; transition: background 0.25s;
+      position: relative;
+      transition: background 0.25s;
     }
+
     .step-card:hover { background: rgba(255,255,255,0.03); }
+
     .step-num {
-      font-family: var(--font-h); font-size: 3.5rem;
-      color: var(--orange); opacity: 0.25;
-      line-height: 1; margin-bottom: 1.25rem;
-      transition: opacity 0.25s;
+      font-family: var(--font-h);
+      font-size: 3.5rem;
+      color: var(--orange);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 1.25rem;
     }
-    .step-card:hover .step-num { opacity: 0.45; }
-    .step-card h3 { font-family: var(--font-h); font-size: 1.25rem; color: #fff; margin-bottom: 0.6rem; }
-    .step-card p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
 
-    /* ═══════════════════════════════════════
-       TESTIMONIALS
-    ═══════════════════════════════════════ */
-    .testi-section { padding: 6rem 0; background: var(--slate); }
-    .sec-head { margin-bottom: 3rem; }
-    .sec-eyebrow {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--orange); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem;
+    .step-card h3 {
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 0.6rem;
     }
-    .sec-eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--orange); border-radius: 2px; }
-    .sec-head h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); color: var(--navy); }
-    .sec-head .sub { font-size: 1rem; color: var(--text-3); margin-top: 0.5rem; }
 
-    .testi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .step-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+
+    .assessment-cta {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .industries-section {
+      padding: 5.5rem 0;
+      background: var(--white);
+    }
+
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .industry-card {
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.65rem;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      font-family: var(--font-h);
+      font-size: 1rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .who-section {
+      padding: 6rem 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .who-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .who-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .who-label::before {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+
+    .who-inner h2 {
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      color: var(--navy);
+      margin-bottom: 1.1rem;
+    }
+
+    .who-inner p {
+      font-size: 0.97rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
+    }
+
+    .who-inner strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .chk-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1.75rem;
+    }
+
+    .chk-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .chk-icon {
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      background: var(--orange-pale);
+      border: 1.5px solid rgba(217,95,59,0.2);
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-weight: 800;
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    .chk-item h4 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .chk-item p {
+      font-size: 0.88rem;
+      color: var(--text-3);
+      line-height: 1.6;
+    }
+
+    .who-photo {
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .who-photo img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+
+    .testi-section {
+      padding: 6rem 0;
+      background: var(--slate);
+    }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
     .testi-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--r-xl); padding: 2.25rem;
-      display: flex; flex-direction: column; gap: 1.1rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
       box-shadow: var(--shadow-sm);
       transition: box-shadow 0.25s, transform 0.25s;
     }
-    .testi-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-    .stars { display: flex; gap: 2px; }
-    .star { color: #f0a500; font-size: 1rem; }
-    .testi-q { font-size: 0.97rem; color: var(--text-2); line-height: 1.75; font-style: italic; flex-grow: 1; position: relative; }
-    .testi-foot { display: flex; align-items: center; gap: 0.85rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+
+    .testi-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .star {
+      color: #f0a500;
+      font-size: 1rem;
+    }
+
+    .testi-q {
+      font-size: 0.97rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      font-style: italic;
+      flex-grow: 1;
+    }
+
+    .testi-foot {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
     .testi-av {
-      width: 44px; height: 44px; border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       background: linear-gradient(135deg, var(--navy), var(--navy-3));
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-h); font-size: 1rem; color: #fff; flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-h);
+      font-size: 1rem;
+      color: #fff;
+      flex-shrink: 0;
     }
-    .testi-name { font-family: var(--font-h); font-size: 0.95rem; color: var(--navy); }
-    .testi-role { font-size: 0.8rem; color: var(--text-3); margin-top: 1px; }
 
-    /* ═══════════════════════════════════════
-       PRICING
-    ═══════════════════════════════════════ */
-    .pricing-section { padding: 6rem 0; background: var(--white); }
-
-    .tier-head {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--text-3); margin: 3rem 0 1.5rem;
-      display: flex; align-items: center; gap: 1rem;
+    .testi-name {
+      font-family: var(--font-h);
+      font-size: 0.95rem;
+      color: var(--navy);
     }
-    .tier-head::before, .tier-head::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
-    .pricing-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .pricing-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .testi-role {
+      font-size: 0.8rem;
+      color: var(--text-3);
+      margin-top: 1px;
+    }
+
+    .pricing-section {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
+    .pricing-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
 
     .price-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--r-xl); padding: 2.25rem 2rem;
-      display: flex; flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
       box-shadow: var(--shadow-sm);
       transition: box-shadow 0.25s, transform 0.25s;
       position: relative;
     }
-    .price-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-    .price-card.featured {
-      background: var(--navy); border-color: var(--navy);
-      transform: scale(1.03); box-shadow: var(--shadow-lg);
+
+    .price-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
     }
-    .price-card.featured:hover { transform: scale(1.03) translateY(-4px); }
-    .price-card.featured h4, .price-card.featured .price-amount { color: #fff; }
+
+    .price-card.featured {
+      background: var(--navy);
+      border-color: var(--navy);
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .price-card.featured:hover {
+      transform: scale(1.03) translateY(-4px);
+    }
+
+    .price-card.featured h4,
+    .price-card.featured .price-amount { color: #fff; }
+
     .price-card.featured > p { color: rgba(255,255,255,0.55); }
     .price-card.featured .price-amount span { color: rgba(255,255,255,0.45); }
     .price-card.featured .features li { color: rgba(255,255,255,0.75); }
@@ -478,145 +1073,403 @@
     .price-card.featured .price-rule { background: rgba(255,255,255,0.1); }
 
     .feat-badge {
-      position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-      background: var(--orange); color: #fff;
-      font-size: 0.69rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-      padding: 5px 14px; border-radius: var(--r-pill);
-      box-shadow: 0 4px 12px rgba(217,95,59,0.4); white-space: nowrap;
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.69rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: var(--r-pill);
+      box-shadow: 0 4px 12px rgba(217,95,59,0.4);
+      white-space: nowrap;
     }
-    .price-card h4 { font-family: var(--font-h); font-size: 1.2rem; color: var(--navy); margin-bottom: 0.35rem; }
-    .price-card > p { font-size: 0.87rem; color: var(--text-3); margin-bottom: 0.75rem; line-height: 1.55; }
-    .price-rule { height: 1px; background: var(--border); margin: 0.5rem 0 1.1rem; }
-    .price-amount { font-family: var(--font-h); font-size: 2.7rem; color: var(--navy); margin-bottom: 1.5rem; line-height: 1; }
-    .price-amount span { font-family: var(--font-b); font-size: 0.93rem; color: var(--text-3); font-weight: 400; }
 
-    .features { list-style: none; flex-grow: 1; display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.75rem; }
-    .features li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.9rem; color: var(--text-2); line-height: 1.5; }
+    .price-card h4 {
+      font-size: 1.2rem;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+
+    .price-card > p {
+      font-size: 0.87rem;
+      color: var(--text-3);
+      margin-bottom: 0.75rem;
+      line-height: 1.55;
+    }
+
+    .price-rule {
+      height: 1px;
+      background: var(--border);
+      margin: 0.5rem 0 1.1rem;
+    }
+
+    .price-amount {
+      font-family: var(--font-h);
+      font-size: 2.45rem;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
+
+    .price-amount span {
+      font-family: var(--font-b);
+      font-size: 0.9rem;
+      color: var(--text-3);
+      font-weight: 400;
+    }
+
+    .features {
+      list-style: none;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.5;
+    }
+
     .f-chk {
-      width: 20px; height: 20px; min-width: 20px; border-radius: 50%;
-      background: #eaf5f0; color: #29a372;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.65rem; font-weight: 800; margin-top: 2px;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      background: #eaf5f0;
+      color: #29a372;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 800;
+      margin-top: 2px;
     }
-    .price-note { font-size: 0.77rem; color: var(--text-3); margin-top: 0.5rem; margin-bottom: 1rem; line-height: 1.5; }
 
-    /* VS box */
-    .vs-box { margin: 0.25rem 0 1.25rem; padding: 0.9rem; background: var(--slate); border: 1.5px dashed var(--border); border-radius: var(--r-lg); }
-    .vs-lbl { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
-    .vs-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.5rem; align-items: center; }
-    .vs-col { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 0.6rem 0.75rem; }
-    .vs-col strong { display: block; font-family: var(--font-h); font-size: 0.88rem; color: var(--navy); margin-bottom: 0.15rem; }
-    .vs-col span { font-size: 0.78rem; color: var(--text-3); }
-    .vs-mid { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: #fff; font-weight: 800; font-size: 0.68rem; }
-    .vs-save { margin-top: 0.7rem; text-align: center; font-weight: 700; font-size: 0.82rem; color: #fff; background: var(--orange); padding: 0.45rem 1rem; border-radius: var(--r-pill); box-shadow: 0 3px 0 var(--orange-dk); }
+    .price-note {
+      font-size: 0.78rem;
+      color: var(--text-3);
+      margin-bottom: 1.25rem;
+      line-height: 1.55;
+    }
 
-    /* ═══════════════════════════════════════
-       CTA STRIP — full-width navy, Pearsk style
-    ═══════════════════════════════════════ */
+    .personal-section {
+      padding: 6rem 0;
+      background: var(--slate);
+    }
+
+    .personal-box {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 3rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .personal-box h2 {
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+      color: var(--navy);
+      margin-bottom: 0.8rem;
+    }
+
+    .personal-box p {
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+    }
+
+    .personal-price {
+      background: var(--navy);
+      color: #fff;
+      border-radius: var(--r-xl);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .personal-price small {
+      display: block;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 0.4rem;
+    }
+
+    .personal-price strong {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .personal-price span {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.86rem;
+    }
+
     .cta-strip {
       padding: 5.5rem 0;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 60%, var(--navy-3) 100%);
-      position: relative; overflow: hidden; text-align: center;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
     }
+
     .cta-strip::before {
       content: "";
-      position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
-      width: 800px; height: 500px;
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
       background: radial-gradient(ellipse, rgba(217,95,59,0.1), transparent 60%);
     }
-    .cta-strip::after {
-      content: "";
-      position: absolute; inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-    .cta-strip-inner { position: relative; z-index: 1; }
-    .cta-strip h2 { font-size: clamp(1.9rem, 4vw, 3rem); color: #fff; margin-bottom: 0.75rem; }
-    .cta-strip p { font-size: 1.05rem; color: rgba(255,255,255,0.6); margin-bottom: 2.5rem; }
-    .cta-strip-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-    /* ═══════════════════════════════════════
-       FAQ
-    ═══════════════════════════════════════ */
-    .faq-section { padding: 6rem 0; background: var(--slate); }
-    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .cta-strip-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-strip h2 {
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-strip p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      margin: 0 auto 2.5rem;
+      max-width: 760px;
+    }
+
+    .cta-strip-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .faq-section {
+      padding: 6rem 0;
+      background: var(--slate);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
     .faq-item {
-      background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg);
-      padding: 1.5rem; cursor: pointer; transition: all 0.22s; box-shadow: var(--shadow-sm);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 1.5rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
     }
-    .faq-item:hover { border-color: rgba(217,95,59,0.3); box-shadow: var(--shadow-md); }
+
     .faq-item.open { border-color: var(--orange); }
-    .faq-q { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; }
-    .faq-q h3 { font-family: var(--font-h); font-size: 0.97rem; color: var(--navy); line-height: 1.4; }
-    .faq-tog {
-      width: 26px; height: 26px; min-width: 26px; border-radius: 50%;
-      background: var(--slate); border: 1.5px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--navy); font-size: 1.1rem; font-weight: 300;
-      transition: all 0.25s; margin-top: 1px;
+
+    .faq-q {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
     }
-    .faq-item.open .faq-tog { background: var(--orange); border-color: var(--orange); color: #fff; transform: rotate(45deg); }
-    .faq-ans { display: none; font-size: 0.9rem; color: var(--text-3); line-height: 1.7; margin-top: 0.85rem; padding-top: 0.85rem; border-top: 1px solid var(--border); }
+
+    .faq-q h3 {
+      font-size: 0.97rem;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+
+    .faq-tog {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      border-radius: 50%;
+      background: var(--slate);
+      border: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 1.1rem;
+      transition: all 0.25s;
+    }
+
+    .faq-item.open .faq-tog {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+      transform: rotate(45deg);
+    }
+
+    .faq-ans {
+      display: none;
+      font-size: 0.9rem;
+      color: var(--text-3);
+      line-height: 1.7;
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
     .faq-item.open .faq-ans { display: block; }
 
-    /* ═══════════════════════════════════════
-       CONTACT
-    ═══════════════════════════════════════ */
-    .contact-section { padding: 6rem 0; background: var(--white); }
+    .contact-section {
+      padding: 6rem 0;
+      background: var(--white);
+    }
+
     .contact-wrap {
-      max-width: 640px; margin: 2.5rem auto 0;
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--r-xl); padding: 3rem;
+      max-width: 720px;
+      margin: 2.5rem auto 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 3rem;
       box-shadow: var(--shadow-lg);
     }
-    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
     .input-group { margin-bottom: 1.25rem; }
-    label { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.45rem; }
+
+    label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0.45rem;
+    }
+
     input, textarea, select {
-      width: 100%; padding: 0.9rem 1.1rem;
-      background: var(--slate); border: 1.5px solid var(--border);
-      border-radius: var(--r-md); font-family: var(--font-b); font-size: 0.93rem; color: var(--navy);
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      background: var(--slate);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-md);
+      font-family: var(--font-b);
+      font-size: 0.93rem;
+      color: var(--navy);
       transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
     }
-    input::placeholder, textarea::placeholder { color: var(--text-3); }
-    select option { background: #fff; color: var(--navy); }
-    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(217,95,59,0.1); background: #fff; }
-    .form-note { text-align: center; font-size: 0.78rem; color: var(--text-3); margin-top: 0.85rem; }
 
-    /* ═══════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════ */
+    input::placeholder, textarea::placeholder { color: var(--text-3); }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(217,95,59,0.1);
+      background: #fff;
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-3);
+      margin-top: 0.85rem;
+    }
+
     footer {
       background: var(--navy);
       padding: 3rem 0 2rem;
       border-top: 3px solid var(--orange);
     }
-    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center; }
-    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
-    .footer-logo img { height: 56px; filter: brightness(0) invert(1); opacity: 0.8; }
-    .footer-logo-name { font-family: var(--font-h); font-size: 1.1rem; color: rgba(255,255,255,0.7); }
-    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
-    .footer-links a { font-size: 0.83rem; font-weight: 600; color: rgba(255,255,255,0.45); }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      text-align: center;
+    }
+
+    .footer-logo img {
+      height: 56px;
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+    }
+
     .footer-links a:hover { color: var(--orange-lt); }
-    .footer-copy { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
-    .footer-copy .brand { color: var(--orange-lt); font-weight: 600; }
-    .footer-sub { font-size: 0.75rem; color: rgba(255,255,255,0.2); }
 
-    /* ═══════════════════════════════════════
-       REVEAL
-    ═══════════════════════════════════════ */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .footer-copy {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.3);
+    }
 
-    /* ═══════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════ */
+    .footer-copy .brand {
+      color: var(--orange-lt);
+      font-weight: 600;
+    }
+
+    .footer-sub {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      nav { gap: 1rem; }
+      nav a:not(.nav-cta) { font-size: 0.8rem; }
+      .pain-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .industry-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
     @media (max-width: 1024px) {
       .pricing-grid-3 { grid-template-columns: 1fr; }
       .price-card.featured { transform: none; }
+      .price-card.featured:hover { transform: translateY(-4px); }
       .steps-grid { grid-template-columns: 1fr; }
       .step-card { border-bottom: 1px solid rgba(255,255,255,0.06); }
     }
+
     @media (max-width: 900px) {
       .who-inner { grid-template-columns: 1fr; gap: 3rem; }
       .who-photo { order: -1; }
@@ -624,264 +1477,399 @@
       .svc-block-inner.reverse > * { direction: ltr; }
       .testi-grid { grid-template-columns: 1fr; }
       .faq-grid { grid-template-columns: 1fr; }
-      .pricing-grid-2 { grid-template-columns: 1fr; }
+      .personal-box { grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px) {
+
+    @media (max-width: 840px) {
       nav { display: none; }
       .hamburger { display: flex; }
       .mobile-nav { display: block; }
-      .hero h1 { font-size: 2.3rem; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.35rem; }
       .hero-stats { gap: 1.5rem; }
+      .pain-grid, .service-grid, .industry-grid { grid-template-columns: 1fr; }
       .contact-wrap { padding: 2rem 1.25rem; }
       .input-row { grid-template-columns: 1fr; }
       .footer-links { gap: 1.25rem; }
+      .personal-box { padding: 2rem 1.25rem; }
     }
   </style>
 
   <script type="application/ld+json">
-  { "@context": "https://schema.org", "@type": "LocalBusiness", "name": "IT Buddy", "url": "https://itbud.net", "telephone": "+19147128172", "address": { "@type": "PostalAddress", "addressRegion": "CT", "addressCountry": "US" }, "areaServed": ["New Haven County, CT","North Branford, CT","East Haven, CT","Branford, CT","Guilford, CT","Westbrook, CT","Clinton, CT"], "founder": { "@type": "Person", "name": "Miguel Villanueva" } }
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "IT Buddy",
+    "url": "https://itbud.net",
+    "telephone": "+19147128172",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "CT",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "New Haven County, CT",
+      "North Branford, CT",
+      "East Haven, CT",
+      "Branford, CT",
+      "Guilford, CT",
+      "Westbrook, CT",
+      "Clinton, CT"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Villanueva"
+    },
+    "description": "Small business IT support, Microsoft 365 and Google Workspace administration, cybersecurity, device management, onboarding and day-to-day technical support in Connecticut."
+  }
   </script>
 </head>
+
 <body>
 
-  <!-- HEADER -->
   <header id="header">
     <div class="container">
       <div class="header-inner">
-        <div class="logo">
+        <a class="logo" href="#home" aria-label="IT Buddy home">
           <img src="ITB-Logo.png" alt="IT Buddy" />
-        </div>
+        </a>
+
         <nav>
-          <a href="#services">Services</a>
+          <a href="#business-services">Business IT</a>
+          <a href="#assessment">Free IT Checkup</a>
           <a href="#process">How It Works</a>
-          <a href="#pricing">Pricing</a>
+          <a href="#pricing">Plans</a>
           <a href="#about">About</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact" class="nav-cta">Get a Free Consult</a>
+          <a href="#personal">Personal Support</a>
+          <a href="#contact" class="nav-cta">Get Your Free IT Checkup</a>
         </nav>
+
         <button class="hamburger" id="hamburger" aria-label="Open menu">
-          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE DRAWER -->
   <div class="mobile-nav" id="mobileNav">
     <div class="mob-overlay" id="navOverlay"></div>
+
     <div class="mob-drawer">
       <div class="mob-head">
         <img src="ITB-Logo.png" alt="IT Buddy" />
-        <button class="mob-close" id="drawerClose">✕</button>
+        <button class="mob-close" id="drawerClose" aria-label="Close menu">✕</button>
       </div>
+
       <div class="mob-links">
-        <a href="#services" class="dl"><span>🔧</span> Services</a>
-        <a href="#process"  class="dl"><span>📋</span> How It Works</a>
-        <a href="#pricing"  class="dl"><span>💰</span> Pricing</a>
-        <a href="#about"    class="dl"><span>👤</span> About</a>
+        <a href="#business-services" class="dl"><span>💼</span> Business IT</a>
+        <a href="#assessment" class="dl"><span>🛡️</span> Free IT Checkup</a>
+        <a href="#process" class="dl"><span>📋</span> How It Works</a>
+        <a href="#pricing" class="dl"><span>💰</span> Plans</a>
+        <a href="#about" class="dl"><span>👤</span> About</a>
+        <a href="#personal" class="dl"><span>🏠</span> Personal Support</a>
         <div class="mob-hr"></div>
-        <a href="#faq"      class="dl"><span>❓</span> FAQ</a>
+        <a href="#faq" class="dl"><span>❓</span> FAQ</a>
       </div>
+
       <div class="mob-bottom">
-        <a href="#contact" class="dl">Get a Free Consult</a>
+        <a href="#contact" class="dl">Get Your Free IT Checkup</a>
       </div>
     </div>
   </div>
 
   <main>
 
-    <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-bg"></div>
       <div class="hero-grid-lines"></div>
+
       <div class="container">
         <div class="hero-content">
           <div class="hero-eyebrow reveal">
             <span class="eyebrow-line"></span>
-            Expert IT &amp; Tech Support · Greater Connecticut
+            Small Business IT Support · Connecticut
           </div>
+
           <h1 class="reveal">
-            Empower Your Home &amp; Business with <em>Simplified Tech Support</em>
+            Your Small Business IT Department —
+            <em>Without Hiring One</em>
           </h1>
+
           <p class="hero-sub reveal">
-            Friendly, expert consulting in IT support, cybersecurity, and device management — so you can focus on what matters while we handle the complexity.
+            IT Buddy handles your computers, employee accounts, Microsoft 365 or Google Workspace,
+            cybersecurity, backups, and everyday technology issues — so you can focus on running your business.
           </p>
+
           <div class="hero-btns reveal">
-            <a href="#contact" class="btn btn-orange">Get a Free Consultation</a>
-            <a href="#services" class="btn btn-outline-white">Explore Services</a>
+            <a href="#assessment" class="btn btn-orange">Get Your Free IT Checkup</a>
+            <a href="#business-services" class="btn btn-outline-white">See How We Help</a>
           </div>
+
           <div class="hero-stats reveal">
             <div>
               <div class="h-stat-num">7<span>+</span></div>
-              <div class="h-stat-label">Years of IT Experience</div>
+              <div class="h-stat-label">Years IT Experience</div>
             </div>
+
+            <div>
+              <div class="h-stat-num">1<span>–</span>15</div>
+              <div class="h-stat-label">Employee Teams We Serve</div>
+            </div>
+
             <div>
               <div class="h-stat-num">EN<span>/</span>ES</div>
               <div class="h-stat-label">Bilingual Support</div>
             </div>
+
             <div>
               <div class="h-stat-num">0</div>
-              <div class="h-stat-label">Jargon. Ever.</div>
-            </div>
-            <div>
-              <div class="h-stat-num">CT<span>+</span></div>
-              <div class="h-stat-label">Remote Anywhere</div>
+              <div class="h-stat-label">Long-Term Contracts</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHO WE ARE -->
-    <section class="who-section" id="about">
+    <section class="pain-section">
       <div class="container">
-        <div class="who-inner">
-          <div class="reveal">
-            <div class="who-label">Who We Are</div>
-            <h2>Your dedicated IT partner — without the enterprise price tag</h2>
-            <p>IT Buddy partners with individuals and small businesses to <strong>simplify technology</strong> — from device setup and troubleshooting to cybersecurity and access management — so you can focus on your life and work while we handle the complexity.</p>
-            <p>Founded by <strong>Miguel Villanueva</strong>, a seasoned IT Engineer with 7+ years across security, identity management, and endpoint support, IT Buddy brings enterprise-grade thinking to everyday people and lean teams.</p>
-            <ul class="chk-list">
-              <li class="chk-item">
-                <div class="chk-icon">✓</div>
-                <div>
-                  <h4>Personal IT Support</h4>
-                  <p>Friendly, patient help for your devices, accounts, and everyday tech headaches — in plain English.</p>
-                </div>
-              </li>
-              <li class="chk-item">
-                <div class="chk-icon">✓</div>
-                <div>
-                  <h4>Small Business IT &amp; Security</h4>
-                  <p>Managed support, user access, device oversight, and security basics — without hiring full-time IT staff.</p>
-                </div>
-              </li>
-              <li class="chk-item">
-                <div class="chk-icon">✓</div>
-                <div>
-                  <h4>Bilingual &amp; Local</h4>
-                  <p>Based in the Greater New Haven area, serving CT in-person and all clients remotely — in English and Spanish.</p>
-                </div>
-              </li>
-            </ul>
+        <div class="sec-head reveal">
+          <div class="sec-eyebrow">Sound Familiar?</div>
+          <h2>Your business shouldn't depend on whoever knows the most about computers.</h2>
+          <p class="sub">
+            Most small businesses don't need a full IT department. But they do need someone making sure
+            their technology, accounts, security, and devices are actually being managed.
+          </p>
+        </div>
+
+        <div class="pain-grid">
+          <div class="pain-card reveal">
+            <div class="pain-icon">👤</div>
+            <h3>Employee Access</h3>
+            <p>New employee starts Monday and nobody knows who should create their email, accounts, or computer access.</p>
           </div>
-          <div class="who-photo reveal">
-            <img src="miguel-portrait.PNG" alt="Miguel Villanueva – IT Buddy Founder" />
+
+          <div class="pain-card reveal">
+            <div class="pain-icon">🔐</div>
+            <h3>Security</h3>
+            <p>You're not sure whether everyone has MFA, whether backups work, or whether former employees still have access.</p>
           </div>
+
+          <div class="pain-card reveal">
+            <div class="pain-icon">💻</div>
+            <h3>Devices</h3>
+            <p>Every laptop is configured differently and updates only happen when someone remembers.</p>
+          </div>
+
+          <div class="pain-card reveal">
+            <div class="pain-icon">☎️</div>
+            <h3>Tech Support</h3>
+            <p>Every printer, Wi-Fi, email, or computer problem eventually lands on the owner's desk.</p>
+          </div>
+        </div>
+
+        <div class="pain-close reveal">
+          <span>IT Buddy fixes that.</span>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES — alternating blocks -->
-    <section class="services-section" id="services">
-
+    <section class="services-section" id="business-services">
       <div class="svc-block">
         <div class="container">
           <div class="svc-block-inner">
             <div class="reveal">
-              <div class="svc-eyebrow">For Home &amp; Personal</div>
-              <h2>Everyday Tech Help — Done Right</h2>
-              <p>Whether your computer is acting up, you just got a new device, or you have one too many "how do I…" questions, IT Buddy is here. Patient, clear, and judgment-free support for anyone.</p>
-              <ul class="svc-points">
-                <li class="svc-point"><span class="sp-check">✓</span> Slow computer tune-ups and troubleshooting</li>
-                <li class="svc-point"><span class="sp-check">✓</span> New device setup and data migration</li>
-                <li class="svc-point"><span class="sp-check">✓</span> Wi-Fi, printer, and connectivity fixes</li>
-                <li class="svc-point"><span class="sp-check">✓</span> Account recovery and password security</li>
-                <li class="svc-point"><span class="sp-check">✓</span> 1-on-1 guided tech coaching — your pace, your questions</li>
-              </ul>
-              <a href="#contact" class="btn btn-orange">Get Personal Support →</a>
-            </div>
-            <div class="svc-visual reveal">
-              <div class="svc-visual-inner">
-                <div class="svc-visual-icon">🚑</div>
-                <div class="svc-visual-label">Home &amp; Personal<br>IT Support</div>
-              </div>
-              <div class="svc-visual-badge">Remote + In-Person</div>
-            </div>
-          </div>
-        </div>
-      </div>
+              <div class="svc-eyebrow">Small Business IT</div>
+              <h2>One Place to Call for Everything IT</h2>
 
-      <div class="svc-block">
-        <div class="container">
-          <div class="svc-block-inner reverse">
-            <div class="reveal">
-              <div class="svc-eyebrow">For Small Business</div>
-              <h2>Managed IT &amp; Cybersecurity Services</h2>
-              <p>We deliver managed IT support enabling small businesses to thrive without a full-time IT department. From user access management to security oversight and device fleet management, IT Buddy keeps your operations running smoothly and securely.</p>
+              <p>
+                IT Buddy acts as your outsourced IT department. I help manage the technology your team depends on
+                without the cost or complexity of hiring internal IT staff.
+              </p>
+
               <ul class="svc-points">
-                <li class="svc-point"><span class="sp-check">✓</span> User &amp; access management (onboarding/offboarding)</li>
-                <li class="svc-point"><span class="sp-check">✓</span> Device fleet monitoring and maintenance</li>
-                <li class="svc-point"><span class="sp-check">✓</span> Security controls, backups, and compliance basics</li>
-                <li class="svc-point"><span class="sp-check">✓</span> Priority business-hours support</li>
-                <li class="svc-point"><span class="sp-check">✓</span> Strategic IT guidance — no contract lock-in</li>
+                <li class="svc-point"><span class="sp-check">✓</span> Employee onboarding &amp; offboarding</li>
+                <li class="svc-point"><span class="sp-check">✓</span> Microsoft 365 &amp; Google Workspace administration</li>
+                <li class="svc-point"><span class="sp-check">✓</span> Laptop &amp; computer setup and management</li>
+                <li class="svc-point"><span class="sp-check">✓</span> MFA, passwords &amp; account security</li>
+                <li class="svc-point"><span class="sp-check">✓</span> Backups &amp; cybersecurity protection</li>
+                <li class="svc-point"><span class="sp-check">✓</span> Wi-Fi, printers &amp; everyday troubleshooting</li>
+                <li class="svc-point"><span class="sp-check">✓</span> Vendor &amp; technology guidance</li>
               </ul>
-              <a href="#contact" class="btn btn-navy">Talk Business Support →</a>
+
+              <a href="#assessment" class="btn btn-orange">Get a Free IT Checkup →</a>
             </div>
+
             <div class="svc-visual reveal">
               <div class="svc-visual-inner">
                 <div class="svc-visual-icon">🛡️</div>
-                <div class="svc-visual-label">Managed IT &amp;<br>Cybersecurity</div>
+                <div class="svc-visual-label">Your Small Business<br>IT Department</div>
               </div>
-              <div class="svc-visual-badge">Teams under 10</div>
+              <div class="svc-visual-badge">Built for Small Teams</div>
             </div>
           </div>
         </div>
       </div>
-
     </section>
 
-    <!-- HOW IT WORKS -->
+    <section class="service-grid-section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div class="sec-eyebrow">What I Manage</div>
+          <h2>Practical IT support built around the problems small businesses actually face</h2>
+          <p class="sub">
+            Clear, useful support without enterprise complexity or unnecessary upselling.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-mini reveal">
+            <div class="icon">👥</div>
+            <h3>Employee Onboarding &amp; Offboarding</h3>
+            <p>Set up email, access, computers, security, and day-one readiness. When someone leaves, company access gets shut down properly.</p>
+          </div>
+
+          <div class="service-mini reveal">
+            <div class="icon">☁️</div>
+            <h3>Microsoft 365 &amp; Google Workspace</h3>
+            <p>Email accounts, permissions, MFA, shared drives, groups, user administration, and everyday troubleshooting.</p>
+          </div>
+
+          <div class="service-mini reveal">
+            <div class="icon">💻</div>
+            <h3>Managed Computers</h3>
+            <p>Standardized setup, updates, security settings, troubleshooting, and ongoing oversight for company devices.</p>
+          </div>
+
+          <div class="service-mini reveal">
+            <div class="icon">🔒</div>
+            <h3>Cybersecurity</h3>
+            <p>MFA, endpoint protection, backups, access controls, password practices, and practical safeguards sized for your business.</p>
+          </div>
+
+          <div class="service-mini reveal">
+            <div class="icon">🧰</div>
+            <h3>Day-to-Day IT Support</h3>
+            <p>Computer won't boot? Wi-Fi stopped working? Employee can't access email? You have one place to call.</p>
+          </div>
+
+          <div class="service-mini reveal">
+            <div class="icon">🧭</div>
+            <h3>IT Planning</h3>
+            <p>Software recommendations, equipment purchases, vendor coordination, and technology decisions without unnecessary complexity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="assessment">
+      <div class="container">
+        <div class="process-head reveal">
+          <div class="process-eyebrow">Complimentary Assessment</div>
+          <h2>Free Small Business IT &amp; Security Checkup</h2>
+          <p class="sub">
+            Find out what's working, what's being overlooked, and what I'd recommend fixing first.
+            No obligation to sign up for ongoing service.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-num">01</div>
+            <h3>Accounts &amp; Access</h3>
+            <p>I review employee access, Microsoft 365 or Google Workspace, MFA, shared accounts, and former-user access.</p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-num">02</div>
+            <h3>Devices &amp; Security</h3>
+            <p>I look at computers, updates, backups, endpoint protection, passwords, and basic security practices.</p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-num">03</div>
+            <h3>Your Recommendations</h3>
+            <p>You'll get straightforward priorities and practical recommendations, whether or not you decide to hire IT Buddy.</p>
+          </div>
+        </div>
+
+        <div class="assessment-cta reveal">
+          <a href="#contact" class="btn btn-orange">Schedule My Free IT Checkup</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries-section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div class="sec-eyebrow">Who We Help</div>
+          <h2>Built for Small Connecticut Businesses</h2>
+          <p class="sub">
+            Especially companies that need dependable IT support but don't need or can't justify a full-time IT employee.
+          </p>
+        </div>
+
+        <div class="industry-grid">
+          <div class="industry-card reveal">⚖️ Law &amp; Professional Services</div>
+          <div class="industry-card reveal">📊 Accounting &amp; Bookkeeping</div>
+          <div class="industry-card reveal">🏠 Real Estate &amp; Property Management</div>
+          <div class="industry-card reveal">🛠 Contractors &amp; Service Companies</div>
+          <div class="industry-card reveal">🩺 Medical &amp; Dental Offices</div>
+          <div class="industry-card reveal">🤝 Nonprofits &amp; Small Organizations</div>
+        </div>
+      </div>
+    </section>
+
     <section class="process-section" id="process">
       <div class="container">
         <div class="process-head reveal">
           <div class="process-eyebrow">Simple Process</div>
           <h2>How IT Buddy Works</h2>
-          <p class="sub">From "it's acting weird" to totally sorted — in three clear steps.</p>
+          <p class="sub">Straightforward support, clear recommendations, and no unnecessary complexity.</p>
         </div>
+
         <div class="steps-grid">
           <div class="step-card reveal">
             <div class="step-num">01</div>
-            <h3>Tell me the issue</h3>
-            <p>Book a session and describe what's wrong. "It's acting weird" is a completely valid starting point — no judgment, no jargon required.</p>
+            <h3>Let's Understand Your Setup</h3>
+            <p>We start with a quick conversation about your team, devices, accounts, security, and current IT challenges.</p>
           </div>
+
           <div class="step-card reveal">
             <div class="step-num">02</div>
-            <h3>Meet your Buddy</h3>
-            <p>We connect via secure video or in-person. I walk through your options clearly before touching anything and explain every step.</p>
+            <h3>Build the Right Setup</h3>
+            <p>I recommend what should be fixed, standardized, secured, or simplified — without selling you things you don't need.</p>
           </div>
+
           <div class="step-card reveal">
             <div class="step-num">03</div>
-            <h3>Relax &amp; enjoy</h3>
-            <p>I handle the heavy lifting, verify everything works, and leave you with simple guidance so the problem stays fixed for good.</p>
+            <h3>IT Buddy Takes Care of It</h3>
+            <p>From employee onboarding to computer problems and cybersecurity, your team has one place to go for IT.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
     <section class="testi-section" id="testimonials">
       <div class="container">
         <div class="sec-head reveal">
           <div class="sec-eyebrow">Client Results</div>
-          <h2>People love their IT Buddy</h2>
-          <p class="sub">Real results for real people — from seniors to small business owners.</p>
+          <h2>Dependable support without the IT department overhead</h2>
+          <p class="sub">Personal, responsive help for businesses and individuals who need technology to simply work.</p>
         </div>
+
         <div class="testi-grid">
           <div class="testi-card reveal">
-            <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <p class="testi-q">"Miguel was incredibly patient and never made me feel embarrassed for not knowing something. He had my new laptop set up and running in under an hour — I couldn't believe how easy he made it."</p>
-            <div class="testi-foot">
-              <div class="testi-av">M</div>
-              <div>
-                <div class="testi-name">Maria Rodriguez</div>
-                <div class="testi-role">Child Care Provider Owner</div>
-              </div>
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
             </div>
-          </div>
-          <div class="testi-card reveal">
-            <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-            <p class="testi-q">"Our small business was constantly dealing with tech headaches. Since signing up for the business plan, things just work. The value is unbeatable compared to a full-time IT person."</p>
+            <p class="testi-q">
+              "Our small business was constantly dealing with tech headaches. Since signing up for the business plan, things just work.
+              The value is unbeatable compared to a full-time IT person."
+            </p>
             <div class="testi-foot">
               <div class="testi-av">I</div>
               <div>
@@ -890,204 +1878,368 @@
               </div>
             </div>
           </div>
+
+          <div class="testi-card reveal">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testi-q">
+              "Miguel was incredibly patient and never made me feel embarrassed for not knowing something.
+              He had my new laptop set up and running in under an hour."
+            </p>
+            <div class="testi-foot">
+              <div class="testi-av">M</div>
+              <div>
+                <div class="testi-name">Maria Rodriguez</div>
+                <div class="testi-role">Child Care Provider Owner</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PRICING -->
     <section class="pricing-section" id="pricing">
       <div class="container">
         <div class="sec-head reveal">
-          <div class="sec-eyebrow">Transparent Pricing</div>
-          <h2>Simple pricing. No surprises.</h2>
-          <p class="sub">Month-to-month. No long-term contracts. Cancel anytime.</p>
+          <div class="sec-eyebrow">Business Plans</div>
+          <h2>Support that can grow with your business</h2>
+          <p class="sub">
+            Month-to-month options for very small teams, growing businesses, and companies that only need a one-time project.
+          </p>
         </div>
 
-        <div class="tier-head reveal">Individual Plans</div>
         <div class="pricing-grid-3 reveal">
           <div class="price-card">
-            <h4>IT Buddy Care</h4>
-            <p>For folks who just want their tech to work — no hassle, no mystery.</p>
+            <h4>Business Essentials</h4>
+            <p>For very small teams that need dependable ongoing IT help without full managed services.</p>
             <div class="price-rule"></div>
-            <div class="price-amount">$175<span>/mo</span></div>
+
+            <div class="price-amount">$499<span>/mo starting</span></div>
+
             <ul class="features">
-              <li><span class="f-chk">✓</span> Weekly virtual check-ins</li>
-              <li><span class="f-chk">✓</span> Remote support via email, chat, phone</li>
-              <li><span class="f-chk">✓</span> Monthly security tune-up</li>
-              <li><span class="f-chk">✓</span> Practical device guidance</li>
+              <li><span class="f-chk">✓</span> Remote IT support</li>
+              <li><span class="f-chk">✓</span> User &amp; account administration</li>
+              <li><span class="f-chk">✓</span> Employee onboarding/offboarding</li>
+              <li><span class="f-chk">✓</span> Microsoft 365 / Google Workspace support</li>
+              <li><span class="f-chk">✓</span> Security guidance</li>
+              <li><span class="f-chk">✓</span> Vendor assistance</li>
+              <li><span class="f-chk">✓</span> Monthly technology review</li>
             </ul>
-            <button class="btn btn-outline-navy btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+
+            <p class="price-note">Best suited for small teams with lighter support needs. Final pricing depends on users, devices, and service scope.</p>
+
+            <button class="btn btn-outline-navy btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+              Ask About Essentials
+            </button>
           </div>
 
           <div class="price-card featured">
-            <div class="feat-badge">✨ Most Popular</div>
-            <h4>IT Buddy Pro</h4>
-            <p>For busy professionals and families who rely on tech every day.</p>
+            <div class="feat-badge">Most Complete</div>
+            <h4>Managed IT</h4>
+            <p>For growing teams that want IT Buddy to actively manage their day-to-day technology.</p>
             <div class="price-rule"></div>
-            <div class="price-amount">$350<span>/mo</span></div>
+
+            <div class="price-amount">Custom<span> monthly pricing</span></div>
+
             <ul class="features">
-              <li><span class="f-chk">✓</span> Everything in Care, plus:</li>
-              <li><span class="f-chk">✓</span> Focused weekly virtual sessions</li>
-              <li><span class="f-chk">✓</span> Monthly in-person visit (local only)</li>
-              <li><span class="f-chk">✓</span> Bi-weekly security checkups</li>
-              <li><span class="f-chk">✓</span> Tailored gear &amp; upgrade advice</li>
+              <li><span class="f-chk">✓</span> Everything in Business Essentials</li>
+              <li><span class="f-chk">✓</span> Device management</li>
+              <li><span class="f-chk">✓</span> Endpoint security</li>
+              <li><span class="f-chk">✓</span> Backup oversight</li>
+              <li><span class="f-chk">✓</span> Proactive monitoring</li>
+              <li><span class="f-chk">✓</span> On-site support when needed</li>
+              <li><span class="f-chk">✓</span> Technology planning</li>
+              <li><span class="f-chk">✓</span> Priority support</li>
             </ul>
-            <button class="btn btn-orange btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Choose Pro</button>
+
+            <button class="btn btn-orange btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+              Get a Free IT Checkup
+            </button>
           </div>
 
           <div class="price-card">
-            <h4>IT Buddy Concierge</h4>
-            <p>For power users and execs who want white-glove, worry-free tech care.</p>
+            <h4>One-Time Business IT</h4>
+            <p>For companies that need a project completed but aren't ready for ongoing support.</p>
             <div class="price-rule"></div>
-            <div class="price-amount">$750<span>/mo</span></div>
-            <ul class="features">
-              <li><span class="f-chk">✓</span> Everything in Pro, plus:</li>
-              <li><span class="f-chk">✓</span> Deep-dive weekly sessions</li>
-              <li><span class="f-chk">✓</span> Bi-weekly in-person visits (local only)</li>
-              <li><span class="f-chk">✓</span> Priority urgent response</li>
-              <li><span class="f-chk">✓</span> White-glove tech management</li>
-            </ul>
-            <button class="btn btn-outline-navy btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Learn More</button>
-          </div>
-        </div>
 
-        <div class="tier-head reveal">Business &amp; One-Time Solutions</div>
-        <div class="pricing-grid-2 reveal">
-          <div class="price-card">
-            <h4>Small Business Plan</h4>
-            <p>Real IT support for small teams — without the full-time IT department overhead.</p>
-            <div class="price-rule"></div>
-            <div class="price-amount">$2,500<span>/mo starting</span></div>
-            <div class="vs-box">
-              <div class="vs-lbl">Cost Comparison</div>
-              <div class="vs-row">
-                <div class="vs-col"><strong>IT Buddy</strong><span>From $2,500/mo</span></div>
-                <div class="vs-mid">vs</div>
-                <div class="vs-col"><strong>In-House IT</strong><span>$80K+/yr + benefits</span></div>
-              </div>
-              <div class="vs-save">💰 Save 40%+ with IT Buddy</div>
-            </div>
-            <ul class="features">
-              <li><span class="f-chk">✓</span> Weekly virtual strategy sessions</li>
-              <li><span class="f-chk">✓</span> On-site visits (local only)</li>
-              <li><span class="f-chk">✓</span> Security &amp; compliance oversight</li>
-              <li><span class="f-chk">✓</span> Priority business-hours support</li>
-              <li><span class="f-chk">✓</span> No contract · Cancel anytime</li>
-            </ul>
-            <button class="btn btn-navy btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Talk Business Support</button>
-          </div>
+            <div class="price-amount">Project<span> pricing</span></div>
 
-          <div class="price-card">
-            <h4>One-Time Tech Help</h4>
-            <p>Need help fast but not ready for ongoing support? We've got you — if available.</p>
-            <div class="price-rule"></div>
-            <div class="price-amount">$200<span> starting</span></div>
             <ul class="features">
-              <li><span class="f-chk">✓</span> Account access recovery</li>
-              <li><span class="f-chk">✓</span> Device &amp; Wi-Fi issues</li>
-              <li><span class="f-chk">✓</span> Last-minute setup help</li>
-              <li><span class="f-chk">✓</span> Clear upfront pricing</li>
-              <li><span class="f-chk">✓</span> Honest next-step recommendations</li>
+              <li><span class="f-chk">✓</span> Microsoft 365 setup</li>
+              <li><span class="f-chk">✓</span> Google Workspace setup</li>
+              <li><span class="f-chk">✓</span> New office technology setup</li>
+              <li><span class="f-chk">✓</span> Wi-Fi &amp; networking</li>
+              <li><span class="f-chk">✓</span> Computer deployment</li>
+              <li><span class="f-chk">✓</span> Security assessments</li>
+              <li><span class="f-chk">✓</span> Account cleanup &amp; migration</li>
             </ul>
-            <p class="price-note">⚠️ Pricing varies by complexity, location &amp; timing. After-hours or in-person requests may be higher.</p>
-            <button class="btn btn-outline-navy btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Help</button>
+
+            <button class="btn btn-outline-navy btn-block" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+              Request a Project Quote
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA STRIP — Pearsk-style full-width -->
-    <section class="cta-strip">
-      <div class="container cta-strip-inner reveal">
-        <h2>Get a Free Consultation Now</h2>
-        <p>Your one-stop partner for all IT needs — home, business, or anything in between.</p>
-        <div class="cta-strip-btns">
-          <a href="#contact" class="btn btn-orange">Get In Touch</a>
-          <a href="tel:+19147128172" class="btn btn-outline-white">📞 Call Us Now</a>
+    <section class="who-section" id="about">
+      <div class="container">
+        <div class="who-inner">
+          <div class="reveal">
+            <div class="who-label">About IT Buddy</div>
+            <h2>Enterprise IT Experience, Built for Small Business</h2>
+
+            <p>
+              IT Buddy was founded by <strong>Miguel Villanueva</strong>, an IT engineer with more than seven years
+              of experience supporting users, devices, cybersecurity, identity systems, and business technology environments.
+            </p>
+
+            <p>
+              After seeing how difficult it can be for small companies to get professional IT support without hiring
+              a full-time employee or signing an expensive long-term MSP contract, IT Buddy was built to fill that gap.
+            </p>
+
+            <ul class="chk-list">
+              <li class="chk-item">
+                <div class="chk-icon">✓</div>
+                <div>
+                  <h4>Professional IT Experience</h4>
+                  <p>Real-world experience across endpoint management, identity, security, cloud platforms, and user support.</p>
+                </div>
+              </li>
+
+              <li class="chk-item">
+                <div class="chk-icon">✓</div>
+                <div>
+                  <h4>Personal, Owner-Led Support</h4>
+                  <p>You work directly with the person responsible for your IT — not a revolving help desk queue.</p>
+                </div>
+              </li>
+
+              <li class="chk-item">
+                <div class="chk-icon">✓</div>
+                <div>
+                  <h4>English &amp; Spanish</h4>
+                  <p>Bilingual support for Connecticut businesses, employees, families, and individuals.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="who-photo reveal">
+            <img src="miguel-portrait.PNG" alt="Miguel Villanueva – IT Buddy Founder" />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <section class="personal-section" id="personal">
+      <div class="container">
+        <div class="personal-box reveal">
+          <div>
+            <div class="sec-eyebrow">Personal Tech Support</div>
+            <h2>Need Help With Technology at Home?</h2>
+
+            <p>
+              IT Buddy also provides patient, one-on-one support for individuals and families who need help
+              with computers, Wi-Fi, printers, accounts, device setup, data migration, security, and everyday tech problems.
+            </p>
+
+            <ul class="svc-points">
+              <li class="svc-point"><span class="sp-check">✓</span> New computer &amp; device setup</li>
+              <li class="svc-point"><span class="sp-check">✓</span> Wi-Fi &amp; printer troubleshooting</li>
+              <li class="svc-point"><span class="sp-check">✓</span> Account recovery &amp; password help</li>
+              <li class="svc-point"><span class="sp-check">✓</span> Data transfers &amp; device migration</li>
+              <li class="svc-point"><span class="sp-check">✓</span> Scam, privacy &amp; security guidance</li>
+              <li class="svc-point"><span class="sp-check">✓</span> Patient one-on-one tech coaching</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-outline-navy">Get Personal Tech Help</a>
+          </div>
+
+          <div class="personal-price">
+            <small>One-Time Support</small>
+            <strong>From $125–$200</strong>
+            <span>Final pricing depends on complexity, travel, timing, and whether service is remote or in person.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="faq-section" id="faq">
       <div class="container">
         <div class="sec-head reveal">
           <div class="sec-eyebrow">Questions Answered</div>
           <h2>Frequently Asked Questions</h2>
-          <p class="sub">Everything you need to know before getting started.</p>
+          <p class="sub">A few things small business owners commonly want to know before getting started.</p>
         </div>
+
         <div class="faq-grid">
           <div class="faq-item reveal" onclick="this.classList.toggle('open')">
-            <div class="faq-q"><h3>Can you help me remotely?</h3><span class="faq-tog">+</span></div>
-            <div class="faq-ans">Yes. Many issues can be resolved via secure remote support and a quick call. If it needs in-person attention, I'll tell you upfront.</div>
+            <div class="faq-q">
+              <h3>What size businesses do you work with?</h3>
+              <span class="faq-tog">+</span>
+            </div>
+            <div class="faq-ans">
+              IT Buddy is designed primarily for small businesses that need dependable IT help but don't have a full internal IT department.
+              The best fit is typically a team of about 1–15 employees.
+            </div>
           </div>
+
           <div class="faq-item reveal" onclick="this.classList.toggle('open')">
-            <div class="faq-q"><h3>What if you can't fix my issue?</h3><span class="faq-tog">+</span></div>
-            <div class="faq-ans">If I can't meaningfully improve things or give you a clear path forward, I'll tell you honestly — no runaround, no wasted time.</div>
+            <div class="faq-q">
+              <h3>What happens during the free IT checkup?</h3>
+              <span class="faq-tog">+</span>
+            </div>
+            <div class="faq-ans">
+              I review the basics of your accounts, access, MFA, devices, backups, and security setup, then explain what I would prioritize.
+              There's no obligation to sign up for a monthly plan.
+            </div>
           </div>
+
           <div class="faq-item reveal" onclick="this.classList.toggle('open')">
-            <div class="faq-q"><h3>Is IT Buddy good for seniors?</h3><span class="faq-tog">+</span></div>
-            <div class="faq-ans">Absolutely. I move at your pace, repeat as needed, and can write down simple steps you can keep. Many of my favorite clients are seniors!</div>
+            <div class="faq-q">
+              <h3>Can you support Microsoft 365 and Google Workspace?</h3>
+              <span class="faq-tog">+</span>
+            </div>
+            <div class="faq-ans">
+              Yes. I can help with users, email, permissions, MFA, shared files, account administration, onboarding, offboarding, and day-to-day issues.
+            </div>
           </div>
+
           <div class="faq-item reveal" onclick="this.classList.toggle('open')">
-            <div class="faq-q"><h3>Do you work with small businesses?</h3><span class="faq-tog">+</span></div>
-            <div class="faq-ans">Yes — I help with accounts, access, devices, backups, and security basics, all without the cost of a full-time IT hire.</div>
+            <div class="faq-q">
+              <h3>Do I need to sign a long-term contract?</h3>
+              <span class="faq-tog">+</span>
+            </div>
+            <div class="faq-ans">
+              No. IT Buddy is built around flexible, month-to-month support rather than locking small businesses into long agreements.
+            </div>
           </div>
+
           <div class="faq-item reveal" onclick="this.classList.toggle('open')">
-            <div class="faq-q"><h3>How fast do you respond?</h3><span class="faq-tog">+</span></div>
-            <div class="faq-ans">Same-day response on business days. Concierge plan clients get priority response for urgent issues.</div>
+            <div class="faq-q">
+              <h3>Can you help remotely?</h3>
+              <span class="faq-tog">+</span>
+            </div>
+            <div class="faq-ans">
+              Yes. Many business and personal IT issues can be resolved securely by remote support. On-site service is also available locally when needed.
+            </div>
           </div>
+
           <div class="faq-item reveal" onclick="this.classList.toggle('open')">
-            <div class="faq-q"><h3>Can I cancel my plan anytime?</h3><span class="faq-tog">+</span></div>
-            <div class="faq-ans">Yes — all plans are month-to-month with no long-term contracts. I want you to stay because I'm delivering value, not because you're locked in.</div>
+            <div class="faq-q">
+              <h3>Do you still work with home users?</h3>
+              <span class="faq-tog">+</span>
+            </div>
+            <div class="faq-ans">
+              Absolutely. Personal tech support is still available for computers, Wi-Fi, printers, account recovery, device setup, migration, and one-on-one coaching.
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <section class="cta-strip">
+      <div class="container cta-strip-inner reveal">
+        <h2>Not Sure How Well Your IT Is Being Managed?</h2>
+
+        <p>
+          Start with a complimentary IT &amp; security checkup. I'll show you what looks good,
+          what needs attention, and what I'd fix first.
+        </p>
+
+        <div class="cta-strip-btns">
+          <a href="#contact" class="btn btn-orange">Get My Free IT Checkup</a>
+          <a href="tel:+19147128172" class="btn btn-outline-white">📞 Talk to Miguel</a>
+        </div>
+      </div>
+    </section>
+
     <section class="contact-section" id="contact">
       <div class="container">
         <div class="sec-head container--narrow reveal">
-          <div class="sec-eyebrow">Contact Us</div>
-          <h2>Let's fix it together.</h2>
-          <p class="sub">Send a message and I'll get back to you within one business day.</p>
+          <div class="sec-eyebrow">Contact IT Buddy</div>
+          <h2>Tell me what you need help with.</h2>
+          <p class="sub">I'll get back to you within one business day.</p>
         </div>
+
         <div class="contact-wrap reveal">
           <form action="https://formsubmit.co/c811203dce3b9c7c017baad34286dbd4" method="POST">
+
             <div class="input-row">
               <div class="input-group">
-                <label>First Name</label>
-                <input type="text" name="first_name" autocomplete="given-name" placeholder="Your first name" required />
+                <label for="first_name">First Name</label>
+                <input id="first_name" type="text" name="first_name" autocomplete="given-name" placeholder="Your first name" required />
               </div>
+
               <div class="input-group">
-                <label>Last Name</label>
-                <input type="text" name="last_name" autocomplete="family-name" placeholder="Your last name" />
+                <label for="last_name">Last Name</label>
+                <input id="last_name" type="text" name="last_name" autocomplete="family-name" placeholder="Your last name" />
               </div>
             </div>
-            <div class="input-group">
-              <label>Email Address</label>
-              <input type="email" name="email" autocomplete="email" placeholder="your@email.com" required />
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" name="email" autocomplete="email" placeholder="your@email.com" required />
+              </div>
+
+              <div class="input-group">
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" name="phone" autocomplete="tel" placeholder="Optional" />
+              </div>
             </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="company">Company</label>
+                <input id="company" type="text" name="company" placeholder="Company name" />
+              </div>
+
+              <div class="input-group">
+                <label for="team_size">Team Size</label>
+                <select id="team_size" name="team_size">
+                  <option value="">Select…</option>
+                  <option>Just me</option>
+                  <option>2–5 employees</option>
+                  <option>6–10 employees</option>
+                  <option>11–20 employees</option>
+                  <option>20+ employees</option>
+                </select>
+              </div>
+            </div>
+
             <div class="input-group">
-              <label>How Can We Help?</label>
-              <select name="help_type" required>
+              <label for="help_type">What Can I Help With?</label>
+              <select id="help_type" name="help_type" required>
                 <option value="">Select an option…</option>
-                <option>Home / Personal Support</option>
-                <option>Small Business Support</option>
-                <option>One-Time Help</option>
-                <option>Not sure — just want to talk!</option>
+                <option>Free Small Business IT Checkup</option>
+                <option>Ongoing Business IT Support</option>
+                <option>Microsoft 365 / Google Workspace</option>
+                <option>Cybersecurity / Security Review</option>
+                <option>Employee Onboarding / Offboarding</option>
+                <option>One-Time Business IT Project</option>
+                <option>Personal / Home Tech Support</option>
+                <option>Not Sure Yet</option>
               </select>
             </div>
+
             <div class="input-group">
-              <label>Tell Us About the Issue</label>
-              <textarea name="message" rows="4" placeholder="Describe what's going on — even 'it's acting weird' works!"></textarea>
+              <label for="message">Tell Me What's Going On</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a little about your business, setup, or the issue you're dealing with."></textarea>
             </div>
+
             <input type="hidden" name="_subject" value="New IT Buddy Website Lead" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://itbud.net/thank-you.html" />
-            <button type="submit" class="btn btn-orange btn-block" style="font-size:1rem;">Send Message ✈️</button>
-            <p class="form-note">🔒 Your info stays private. We'll reply within 1 business day.</p>
+
+            <button type="submit" class="btn btn-orange btn-block" style="font-size:1rem;">
+              Send Message ✈️
+            </button>
+
+            <p class="form-note">🔒 Your information stays private. I'll reply within one business day.</p>
           </form>
         </div>
       </div>
@@ -1095,22 +2247,30 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
           <img src="ITB-Logo.png" alt="IT Buddy" />
         </div>
+
         <div class="footer-links">
-          <a href="#services">Services</a>
-          <a href="#pricing">Pricing</a>
+          <a href="#business-services">Business IT</a>
+          <a href="#assessment">Free IT Checkup</a>
+          <a href="#pricing">Plans</a>
           <a href="#about">About</a>
+          <a href="#personal">Personal Support</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </div>
-        <p class="footer-copy">© <span id="year"></span> <span class="brand">IT Buddy</span> by Miguel Villanueva · All rights reserved.</p>
-        <p class="footer-sub">Expert IT support for everyone — no jargon, ever.</p>
+
+        <p class="footer-copy">
+          © <span id="year"></span> <span class="brand">IT Buddy</span> by Miguel Villanueva · All rights reserved.
+        </p>
+
+        <p class="footer-sub">
+          Small business IT support across Connecticut · Remote support available.
+        </p>
       </div>
     </div>
   </footer>
@@ -1118,25 +2278,41 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav
-    const hamburger  = document.getElementById("hamburger");
-    const mobileNav  = document.getElementById("mobileNav");
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
     const navOverlay = document.getElementById("navOverlay");
-    const drawerClose= document.getElementById("drawerClose");
-    const drawerLinks= document.querySelectorAll(".dl");
-    const openNav  = () => { mobileNav.classList.add("open"); hamburger.classList.add("open"); document.body.style.overflow = "hidden"; };
-    const closeNav = () => { mobileNav.classList.remove("open"); hamburger.classList.remove("open"); document.body.style.overflow = ""; };
+    const drawerClose = document.getElementById("drawerClose");
+    const drawerLinks = document.querySelectorAll(".dl");
+
+    const openNav = () => {
+      mobileNav.classList.add("open");
+      hamburger.classList.add("open");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeNav = () => {
+      mobileNav.classList.remove("open");
+      hamburger.classList.remove("open");
+      document.body.style.overflow = "";
+    };
+
     hamburger.addEventListener("click", openNav);
     drawerClose.addEventListener("click", closeNav);
     navOverlay.addEventListener("click", closeNav);
-    drawerLinks.forEach(l => l.addEventListener("click", closeNav));
+    drawerLinks.forEach(link => link.addEventListener("click", closeNav));
 
-    // Scroll reveal
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) { setTimeout(() => e.target.classList.add("visible"), i * 80); io.unobserve(e.target); }
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add("visible"), index * 80);
+          io.unobserve(entry.target);
+        }
       });
-    }, { threshold: 0.07, rootMargin: "0px 0px -30px 0px" });
+    }, {
+      threshold: 0.07,
+      rootMargin: "0px 0px -30px 0px"
+    });
+
     document.querySelectorAll(".reveal").forEach(el => io.observe(el));
   </script>
 
